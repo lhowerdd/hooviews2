@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SearchScreenController">
+    <children>
+      <HBox prefHeight="19.0" prefWidth="600.0">
+         <children>
+              <Label alignment="BOTTOM_LEFT" prefHeight="26.0" prefWidth="111.0" text="Course Search Page" />
+            <Pane prefHeight="26.0" prefWidth="417.0" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#handleMyProfileButton" text="My Profile" />
+         </children>
+      </HBox>
+        <TextField fx:id="courseSubject" promptText="Course Subject" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="courseNumber" promptText="Course Number" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="courseTitle" promptText="Course Title" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label fx:id="loadCourseFeedback" />
+      <HBox prefHeight="20.0" prefWidth="600.0">
+
+              <Button fx:id="search" onAction="#handleSearchButton" text="Search" />
+            <Pane prefHeight="0.0" prefWidth="14.0" />
+              <Button fx:id="addCourse" onAction="#handleAddCourseButton" text="Add Course" />
+            <Pane prefHeight="0.0" prefWidth="14.0" />
+            <Button fx:id="reset" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleResetButton" prefHeight="26.0" prefWidth="91.0" text="Reset Search" textAlignment="CENTER" />
+            <Pane prefHeight="26.0" prefWidth="272.0" />
+              <Button fx:id="signOut" onAction="#handleSignOut" prefHeight="26.0" prefWidth="71.5" text="Sign Out" />
+</HBox>
+        <Label fx:id="messageLabel" />
+      <ListView fx:id="courseList" onMouseClicked="#handleCourseSelection" prefHeight="229.0" prefWidth="600.0" />
+    </children>
+
+</VBox>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<?import javafx.scene.control.*?>-->
+<!--<?import javafx.scene.layout.*?>-->
+<!--<VBox prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.sde.reviews.ReviewSceneController">-->
+<!--    <children>-->
+<!--        <Label fx:id="courseLabel" />-->
+<!--        <Label fx:id="averageRatingLabel" />-->
+<!--        <Label fx:id="prevReview" />-->
+<!--        <HBox>-->
+<!--            <Label text="Rating:" />-->
+<!--            <TextField fx:id="rating" prefHeight="25.0" prefWidth="82.0" />-->
+<!--        </HBox>-->
+<!--        <Label fx:id="ratingFeedback" />-->
+<!--        <HBox>-->
+<!--            <Label text="Comment:" />-->
+<!--            <TextArea fx:id="comment" />-->
+<!--        </HBox>-->
+<!--        <Label fx:id="reviewSubmitFeedback" />-->
+<!--        <Button onAction="#handleReviewSubmission" text="Submit Review" />-->
+<!--        <Button onAction="#handleReviewDeletion" text="Delete Review" />-->
+<!--        <Label fx:id="message" />-->
+<!--        <ListView fx:id="reviewList" mouseTransparent="true" prefHeight="200.0" prefWidth="200.0" />-->
+<!--        <Button onAction="#navigateToSearchScreen" text="Back to Search" />-->
+<!--    </children>-->
+<!--</VBox>-->
+
+<VBox alignment="CENTER_LEFT" prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReviewSceneController">
+    <children>
+        <Label fx:id="courseLabel2" />
+        <Label fx:id="courseLabel" />
+        <Label fx:id="averageRatingLabel" />
+        <Label fx:id="prevReview" />
+        <Label fx:id="prevReview2" />
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Rating:" />
+            <TextField fx:id="rating" prefHeight="25.0" prefWidth="60.0" style="-fx-prompt-text-fill: derive(-fx-control-inner-background, -30%);" />
+            <Label text="out of 5" />
+        </HBox>
+        <Label fx:id="ratingFeedback" />
+
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Comment:" />
+            <TextArea fx:id="comment" prefHeight="39.0" prefWidth="531.0" promptText="Enter your comment..." style="-fx-prompt-text-fill: derive(-fx-control-inner-background, -30%);" />
+        </HBox>
+      <HBox alignment="CENTER" prefHeight="179.0" prefWidth="600.0">
+         <children>
+      
+              <Button onAction="#handleReviewSubmission" text="Submit Review" />
+            <Pane prefHeight="26.0" prefWidth="14.0" />
+              <Button onAction="#handleReviewUpdate" text="Update Review" />
+            <Pane prefHeight="0.0" prefWidth="14.0" />
+              <Button onAction="#handleReviewDeletion" text="Delete Review" />
+            <Pane prefHeight="0.0" prefWidth="157.0" />
+              <Button onAction="#handleSelectUserReview" text="Select User Review" />
+         </children>
+      </HBox>
+
+        <Label fx:id="reviewSubmitFeedback" />
+        <Label fx:id="message" />
+        <ListView fx:id="reviewList" onMouseClicked="#handleReviewSelection" prefHeight="316.0" prefWidth="600.0" />
+        <Button onAction="#navigateToSearchScreen" text="Back to Search" />
+    </children>
+</VBox>
